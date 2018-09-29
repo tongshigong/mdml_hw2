@@ -1,0 +1,28 @@
+---
+title: Messy Data & Machine Learning
+subtitle: Homework Assignment 2
+author: Alan Chen, Teresa Gong, Paul Sergent
+date: September 2018
+header-includes:
+    - \usepackage{amsmath}
+output: pdf_document
+---
+
+# Question 1: Logistic regression applied to voting
+
+## A)
+
+## B)
+
+## C)
+
+
+# Question 2: Tweet classification using Naive Bayes
+
+## A)
+
+## B)
+
+## C)
+
+## D)
