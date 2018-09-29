@@ -1,12 +1,22 @@
 ---
 title: Messy Data & Machine Learning
 subtitle: Homework Assignment 2
-author: Alan Chen, Teresa Gong, Paul Sergent
+author:
+    -Alan Chen
+    -Teresa Gong
+    -Paul Sergent
 date: September 2018
 header-includes:
     - \usepackage{amsmath}
 output: pdf_document
 ---
+
+```{r rmdSetup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+knitr::opts_chunk$set(include=TRUE)
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=60), tidy=TRUE)
+knitr::opts_knit$set(root.dir='../')
+```
 
 # Question 1: Logistic regression applied to voting
 
