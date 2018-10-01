@@ -21,9 +21,28 @@ knitr::opts_knit$set(root.dir='../')
 # Question 1: Logistic regression applied to voting
 
 ## A)
+```{r}
+library(readr)
+library(tidyverse)
+library(lubridate)
+library(class)
+library(dplyr)
 
+poll <- read_tsv(file = 'poll_data.tsv')
+```
 ## B)
+```{r}
+poll <- poll %>%
+     mutate(vote_2008 = ifelse(vote_2008 == "john mcCain",0,1))
+View(poll)
 
+model <- glm( vote_2008 ~ sex + age, data = poll, family = binomial)
+print(model)
+```
+```{r}
+summary(model)
+### interpretation: The summary of the model predicts the likelihood of voting for Obama in the 2008  election for genders and each age groups. Each independent variable is statistically significant in the relationship with dependent variable. In general, males are less likely to vote for Obama. And for all age groups, in general, people who are older are less likely to vote for Obama. We consider the residual deviance because there are more than one variable in the model. Since 1-pchisq(13655-13472, 9999-9995) = 0, we reject the null hypothesis that the deviance is the same.
+```
 ## C)
 
 
