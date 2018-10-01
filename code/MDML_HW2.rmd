@@ -43,6 +43,14 @@ print(model)
 summary(model)
 ### interpretation: The summary of the model predicts the likelihood of voting for Obama in the 2008  election for genders and each age groups. Each independent variable is statistically significant in the relationship with dependent variable. In general, males are less likely to vote for Obama. And for all age groups, in general, people who are older are less likely to vote for Obama. We consider the residual deviance because there are more than one variable in the model. Since 1-pchisq(13655-13472, 9999-9995) = 0, we reject the null hypothesis that the deviance is the same.
 ```
+```{r}
+prediction <- predict(model, poll, type="response")
+print(prediction)
+BiPred <- rep(0,length(prediction))
+BiPred[prediction>=0.5] <- 1
+print(BiPred)
+### to be completed.
+```
 ## C)
 
 
